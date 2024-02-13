@@ -1,5 +1,6 @@
 package com.example.bakalaureus_api.controller;
 
+import com.example.bakalaureus_api.domain.EmissionLists;
 import com.example.bakalaureus_api.domain.ListDTO;
 import com.example.bakalaureus_api.service.EmissionFactorService;
 import lombok.RequiredArgsConstructor;
@@ -22,10 +23,16 @@ public class EmissionFactorController {
     private final EmissionFactorService emissionFactorService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<ListDTO>> getEmissionFactors(
+    public ResponseEntity<List<ListDTO>> getEmissionFactorLists(
             @RequestParam(value = "listName", required = false) String listName
     ) {
         List<ListDTO> listsWrapper = emissionFactorService.getListsWrapper(listName);
         return ResponseEntity.ok(listsWrapper);
+    }
+
+    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    private ResponseEntity<EmissionLists> getAllEmissionFactorLists() {
+        EmissionLists lists = emissionFactorService.getEmissionFactorLists();
+        return ResponseEntity.ok(lists);
     }
 }

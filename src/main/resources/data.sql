@@ -3,9 +3,9 @@ INSERT INTO emission_factor_list (list_name) VALUES
                                                  ('vehicleFuels1'),
                                                  ('vehicleFuels2'),
                                                  ('vehicleFuels3'),
-                                                 ('hajusHeitmed'),
-                                                 ('ostetudElektrienergia'),
-                                                 ('ostetudSoojusEnergia'),
+                                                 ('dispersedEmissions'),
+                                                 ('boughtElectricalEnergy'),
+                                                 ('boughtHeatEnergy'),
                                                  ('transport'),
                                                  ('tooreisid'),
                                                  ('tooleKoju'),
@@ -208,3 +208,24 @@ INSERT INTO emission_factor (emission_factor_list_id, emission_type, factor) VAL
                                                                                  (5, 'Teadmata', 638),
                                                                                  (5, 'Trifluorometüülväävelpentafluoriid', 17400),
                                                                                  (5, 'Väävelheksafluoriid', 23500);
+
+INSERT INTO emission_factor (emission_factor_list_id, emission_type, factor) VALUES
+                                                                                 (6, 'Taastuvelekter (päritolutunnistusega: biomassist)', 0.00023),
+                                                                                 (6, 'Taastuvelekter (päritolutunnistusega: päikese-, tuule- ja/või hüdroenergiast)', 0.000),
+                                                                                 (6, 'Tavaelekter (segajääk)', 0.715),
+                                                                                 (6, 'Sõiduvahend (taastuvelekter)', 0.000),
+                                                                                 (6, 'Sõiduvahend (tavaelekter)', 0.715);
+
+INSERT INTO emission_factor (emission_factor_list_id, emission_type, factor) VALUES
+                                                                                 (7, 'Kaugküte - biomass (nt puiduhake, saepuru)', 0.00029),
+                                                                                 (7, 'Kaugküte - Eesti keskmine', 0.153),
+                                                                                 (7, 'Kaugküte - freesturvas', 0.480),
+                                                                                 (7, 'Kaugküte - kerge kütteõli', 0.333),
+                                                                                 (7, 'Kaugküte - maagaas', 0.249),
+                                                                                 (7, 'Kaugküte - põlevkivi', 0.460),
+                                                                                 (7, 'Kaugküte - põlevkiviõli raske fraktsioon', 0.348),
+                                                                                 (7, 'Lokaalküte - biomass (puiduhake)', 0.00026),
+                                                                                 (7, 'Lokaalküte - freesturvas', 0.480),
+                                                                                 (7, 'Lokaalküte - kerge kütteõli', 0.296),
+                                                                                 (7, 'Lokaalküte - maagaas', 0.221),
+                                                                                 (7, 'Lokaalküte - põlevkiviõli raske fraktsioon', 0.310);
