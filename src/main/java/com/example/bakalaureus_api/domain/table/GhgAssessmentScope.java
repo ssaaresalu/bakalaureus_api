@@ -15,6 +15,6 @@ public class GhgAssessmentScope {
     private String influenceArea;
     private String category;
     @ManyToOne
-    @JoinColumn(name = "organization_id", nullable = false)
-    private Organization organization;
+    @JoinColumn(name = "yearly_info_id")
+    private YearlyInfo yearlyInfo;
 }

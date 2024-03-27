@@ -1,18 +1,17 @@
 package com.example.bakalaureus_api.domain.table;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "structural_unit")
-public class StructuralUnit {
+@Table(name = "relative-indicator")
+public class RelativeIndicator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long number;
-    private String name;
-    private String location;
+    @Column(name = "employee_count", nullable = false)
+    private String employeeCount;
     @ManyToOne
     @JoinColumn(name = "yearly_info_id")
     private YearlyInfo yearlyInfo;
