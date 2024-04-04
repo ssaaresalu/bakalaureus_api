@@ -3,12 +3,14 @@ package com.example.bakalaureus_api.controller;
 import com.example.bakalaureus_api.domain.table.Organization;
 import com.example.bakalaureus_api.service.OrganizationService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/organization")
 @RequiredArgsConstructor

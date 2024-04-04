@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Entity
@@ -12,6 +12,7 @@ import java.util.Set;
 public class Organization implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="organization_id")
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
@@ -20,5 +21,5 @@ public class Organization implements Serializable {
     @Column(name = "reporting_period_end", nullable = false)
     private String reportingPeriodEnd;
     @OneToMany(mappedBy = "organization", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<YearlyInfo> yearlyInfo;
+    private List<YearlyInfo> yearlyInfo;
 }

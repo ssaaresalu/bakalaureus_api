@@ -1,5 +1,6 @@
 package com.example.bakalaureus_api.domain.table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,5 +16,6 @@ public class StructuralUnit {
     private String location;
     @ManyToOne
     @JoinColumn(name = "yearly_info_id")
+    @JsonIgnore
     private YearlyInfo yearlyInfo;
 }
