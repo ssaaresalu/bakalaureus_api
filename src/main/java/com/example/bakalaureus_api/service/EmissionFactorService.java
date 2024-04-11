@@ -60,6 +60,26 @@ public class EmissionFactorService {
         response.setDispersedEmissions(getListValuesByEnum(ValidList.DISPERSED_EMISSIONS, lists));
         response.setBoughtElectricalEnergy(getListValuesByEnum(ValidList.BOUGHT_ELECTRICAL_ENERGY, lists));
         response.setBoughtHeatEnergy(getListValuesByEnum(ValidList.BOUGHT_HEAT_ENERGY, lists));
+        response.setVans(getListValuesByEnum(ValidList.VANS, lists));
+        response.setRigidTruckMean(getListValuesByEnum(ValidList.RIGID_TRUCK_MEAN, lists));
+        response.setRigidTruckTonsFull(getListValuesByEnum(ValidList.RIGID_TRUCK_TONS_FULL, lists));
+        response.setRigidTruckTonsHalf(getListValuesByEnum(ValidList.RIGID_TRUCK_TONS_HALF, lists));
+        response.setArticulatedTruckMean(getListValuesByEnum(ValidList.ARTICULATED_TRUCK_MEAN, lists));
+        response.setArticulatedTruckFull(getListValuesByEnum(ValidList.ARTICULATED_TRUCK_FULL, lists));
+        response.setArticulatedTruckHalf(getListValuesByEnum(ValidList.ARTICULATED_TRUCK_HALF, lists));
+        response.setArticulatedRigidMean(getListValuesByEnum(ValidList.ARTICULATED_RIGID_MEAN, lists));
+        response.setArticulatedRigidFull(getListValuesByEnum(ValidList.ARTICULATED_RIGID_FULL, lists));
+        response.setArticulatedRigidHalf(getListValuesByEnum(ValidList.ARTICULATED_RIGID_HALF, lists));
+        response.setTransportBus(getListValuesByEnum(ValidList.TRANSPORT_BUS, lists));
+        response.setTrains(getListValuesByEnum(ValidList.TRAINS, lists));
+        response.setPlanes(getListValuesByEnum(ValidList.PLANES, lists));
+        response.setShips(getListValuesByEnum(ValidList.SHIPS, lists));
+        response.setBusinessTripsSmall(getListValuesByEnum(ValidList.BUSINESS_TRIPS_SMALL, lists));
+        response.setBusinessTripsBig(getListValuesByEnum(ValidList.BUSINESS_TRIPS_BIG, lists));
+        response.setWorkHomeSmallVehicle(getListValuesByEnum(ValidList.WORK_HOME_SMALL_VEHICLE, lists));
+        response.setWorkHomeBigVehicle(getListValuesByEnum(ValidList.WORK_HOME_BIG_VEHICLE, lists));
+        response.setWaste(getListValuesByEnum(ValidList.WASTE, lists));
+        response.setCapacity(getListValuesByEnum(ValidList.CAPACITY, lists));
         return response;
     }
 
