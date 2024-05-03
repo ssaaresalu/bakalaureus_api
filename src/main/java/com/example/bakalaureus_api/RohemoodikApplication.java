@@ -12,10 +12,10 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
-public class BakalaureusApiApplication {
+public class RohemoodikApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BakalaureusApiApplication.class, args);
+        SpringApplication.run(RohemoodikApplication.class, args);
     }
 
     @Bean
