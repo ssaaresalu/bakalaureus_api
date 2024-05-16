@@ -1,16 +1,16 @@
 # Rohemõõdik
 
-## Juhend rakenduse käivitamiseks:
+## Instructions for launching the application:
 
-    1. Kloonida käesolev repo ning avada see lemmik IDEs (Microsoft Visual Studio/IntelliJ nt.)
+    1. Clone this repo and open it in your favorite IDE (eg Microsoft Visual Studio/IntelliJ)
 
-    2. Laadida alla PostgreSQL andmebaas - server on vajalik rakenduse jooksutamiseks. Rakendus on ehitatud PostgreSQL 16-ga.
+    2. Download the PostgreSQL database - a server is required to run the application. The application is built with PostgreSQL 16.
 
-    3. src/main/resources/application.properties - lisada oma ühenduse URL ja postgres kasutaja ning parooli andmed - 
-       vaikimisi on kasutaja postgres, URL jdbc:postgresql://localhost:5432/postgres ning parooli peab esmalt ise valima
+    3. src/main/resources/application.properties - add your connection URL and postgres user and password details -
+       by default, the user is postgres, the URL is jdbc:postgresql://localhost:5432/postgres, and the password must be chosen
 
-    4. jooksutada terminalis käsk ./gradlew build 
+    4. run the command ./gradlew build in the terminal 
 
-    5. jooksutada rakendus (Run RohemoodikApplication)
+    5. run the application (Run RohemoodikApplication)
 
-    6. Liikuda front-end reposse (bakalaureus-ui)
+    6. Move on to the front-end repository (bakalaureus-ui)
